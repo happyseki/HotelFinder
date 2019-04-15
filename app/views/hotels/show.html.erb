@@ -1,0 +1,7 @@
+<h1><%= @hotel.name %></h1>
+<p><%= @hotel.location %></p>
+<h3>Room Type</h3>
+<p></p>
+<h3>Amenities</h3>
+<p><%= @hotel.amenities %></p>
+<%= button_to "Check More Hotels", home_path(@hotel) , method: :get %>

@@ -1,0 +1,10 @@
+<ul>
+
+ <% @hotels.each do|hotel| %>
+  <li><%= link_to hotel.name, hotel %></li><br>
+    <li><%= hotel.location %></li><br>
+  <li><%= image_tag(hotel.img_url, size:"200x200") %></li><br>
+    <li><%= hotel.amenities %></li><br><br>
+  <% end %>
+
+</ul>
