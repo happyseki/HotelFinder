@@ -1,0 +1,16 @@
+<h1>My Booking Details</h1>
+<h3>Check in & Check out</h3>
+<ul>
+  <li>Check in date: <%= @booking.check_in_date.strftime("%m/%d/%Y") %></li>
+  <li>Check out date: <%= @booking.check_out_date.strftime("%m/%d/%Y") %></li>
+</ul>
+<h3>Room Details</h3>
+<ul>
+  <li><%= @room.room_type %></li>
+</ul>
+<h3>Price Summary</h3>
+<ul>
+  <li>Room Price: $ <%= @room.rate %></li>
+  <li>Taxes: $ <%= tax = (@room.rate * 0.1475).to_f %></li>
+  <li>Room Total: $ <%= @room.rate + tax %></li>
+</ul>

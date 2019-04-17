@@ -1,7 +1,18 @@
 <h1><%= @hotel.name %></h1>
 <p><%= @hotel.location %></p>
 <h3>Room Type</h3>
-<p></p>
+<table>
+  <tr>
+    <th>Room Type</th>
+    <th>Room Rate</th>
+  </tr>
+<% @rooms.each do |room| %>
+<tr>
+  <td><%= room.room_type %></td>
+  <td><%= room.rate %><%= button_to "BOOK NOW", booking_room_hotel_path(@hotel, room), method: :get %></td>
+</tr>
+<% end %>
+</table>
 <h3>Amenities</h3>
 <p><%= @hotel.amenities %></p>
-<%= button_to "Check More Hotels", home_path(@hotel) , method: :get %>
+<%= button_to "Check More Hotels", home_path(@hotel), method: :get %>
