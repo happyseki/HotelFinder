@@ -1,4 +1,6 @@
 <h1>My Bookings</h1>
-<%= @bookings.each do|booking| %>
-<%= booking  %>
-<% end %>
+<ul>
+  <% @bookings.each do|booking|%>
+  <li><%= booking.room.hotel.name %>, <%= booking.room.room_type%> </li>
+  <% end %>
+</ul>

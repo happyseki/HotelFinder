@@ -1,5 +1,12 @@
 <h1><%= @hotel.name %></h1>
 <p><%= @hotel.location %></p>
+<% @images.each do|image| %>
+<%= image_tag(image.name, size:"100x100") %>
+<% end %>
+<div class="picture-container">
+
+</div>
+
 <h3>Room Type</h3>
 <table>
   <tr>

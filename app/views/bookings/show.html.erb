@@ -34,3 +34,4 @@
 
   <%= button_to "Edit My Booking", edit_booking_room_hotel_path(@booking), method: :get %>
   <%= button_to "Delete My Booking", destroy_booking_room_hotel_path(@booking), method: :delete, data: { confirm:"Are you sure?" } %>
+  <%= button_to "View My Bookings", bookings_hotel_path, method: :get %>

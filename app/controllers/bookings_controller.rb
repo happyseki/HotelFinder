@@ -2,7 +2,8 @@ class BookingsController < ApplicationController
  skip_before_action :authorized, only:[:create, :update]
  before_action :find_booking, only:[:show, :edit, :update, :destroy]
   def index
-    @bookings = Booking.all
+    @user = User.find(session[:user_id])
+    @bookings = @user.bookings
   end
 
   def new
@@ -33,7 +34,7 @@ class BookingsController < ApplicationController
   def update
     @room_number = params[:room_number]
     @user_id = session[:user_id]
-    @booking = Booking.update(booking_params)
+    @booking.update(booking_params)
     if @booking.valid?
      redirect_to show_booking_room_hotel_path(@booking)
    else
@@ -45,7 +46,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking.destroy
     flash[:notice] = "My booking was deleted!"
-    redirect_to bookings_room_hotel_path
+    redirect_to bookings_hotel_path
   end
 
   private

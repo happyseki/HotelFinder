@@ -4,7 +4,7 @@
 <p><%=  error %></p>
 <% end %>
 <% end %>
-<%= form_for @booking,  url: edit_booking_room_hotel_path do |f| %>
+<%= form_for @booking,  url: update_booking_room_hotel_path do |f| %>
   <%= f.label "Check-in:" %><br>
   <%= f.text_field :check_in_date, placeholder:"YYYY/MM/DD"%><br><br>
   <%= f.label "Check-out:" %><br>
