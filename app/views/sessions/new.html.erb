@@ -3,9 +3,9 @@
 <h4><%= flash[:notice] %></h4>
 
 <%= form_tag(signin_path) do %>
-  <%= label_tag :first_name %>
-  <%= text_field :first_name %>
-  <%= label_tag :last_name %>
-  <%= text_field :last_name %>
+  <%= label_tag :email %>
+  <%= email_field_tag :email %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
   <%= submit_tag 'Sign In' %>
 <% end %>

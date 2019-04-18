@@ -1,16 +1,36 @@
 <h1>My Booking Details</h1>
+<h3>Customer Info</h3>
+<p>First Name: <%= @user.first_name %></p>
+<p>Last Name: <%= @user.last_name %></p>
+
 <h3>Check in & Check out</h3>
-<ul>
-  <li>Check in date: <%= @booking.check_in_date.strftime("%m/%d/%Y") %></li>
-  <li>Check out date: <%= @booking.check_out_date.strftime("%m/%d/%Y") %></li>
-</ul>
+  <p>Check in date:  <%=  DateTime.parse(@booking.check_in_date).strftime("%B %d, %Y, %A")%></p>
+  <p>Check out date:  <%= DateTime.parse(@booking.check_out_date).strftime("%B %d, %Y, %A") %></p>
+  <% if @booking.num_ppl == 1%>
+   <p><%= @booking.num_ppl %> Adult</p>
+   <% else %>
+  <p><%= @booking.num_ppl %> Adults</p>
+  <% end %>
+
 <h3>Room Details</h3>
-<ul>
-  <li><%= @room.room_type %></li>
-</ul>
+  <p><%= @room.room_type %></p>
+
 <h3>Price Summary</h3>
-<ul>
-  <li>Room Price: $ <%= @room.rate %></li>
-  <li>Taxes: $ <%= tax = (@room.rate * 0.1475).to_f %></li>
-  <li>Room Total: $ <%= @room.rate + tax %></li>
-</ul>
+<p>
+  <% total_nt = (Date.parse(@booking.check_out_date) - Date.parse(@booking.check_in_date)).to_i %>
+  <% if total_nt == 1 && @booking.num_rooms == 1 %>
+  <%= total_nt %> Night, <%= @booking.num_rooms %> Room
+  <% elsif total_nt > 1 && @booking.num_rooms == 1 %>
+  <%= total_nt %> Nights, <%= @booking.num_rooms %> Room
+  <% elsif total_nt == 1 && @booking.num_rooms > 1 %>
+  <%= total_nt %> Night, <%= @booking.num_rooms %> Rooms
+  <% else %>
+  <%= total_nt %> Nights, <%= @booking.num_rooms %> Rooms
+  <% end %>
+</p>
+  <p>Room Price: $ <%= total = @room.rate * @booking.num_rooms * total_nt%></p>
+  <p>Taxes: $ <%= tax = (total * 0.1475).to_f.round(2) %></p>
+  <p>Room Total: $ <%= total + tax %></p>
+
+  <%= button_to "Edit My Booking", edit_booking_room_hotel_path(@booking), method: :get %>
+  <%= button_to "Delete My Booking", destroy_booking_room_hotel_path(@booking), method: :delete, data: { confirm:"Are you sure?" } %>

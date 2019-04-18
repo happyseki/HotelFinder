@@ -1,6 +1,6 @@
-class HotelsController < ApplicationController
-
+class HotelsController < ApplicationController 
   def home
+    @user = User.find(session[:user_id])
     @hotels = Hotel.all
   end
 

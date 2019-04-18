@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   resources :hotels do
     get 'rooms', on: :member
     get 'rooms/:room_number', to: 'bookings#new', as: "booking_room", on: :member
+    get 'rooms/:room_number/bookings', to: 'bookings#index', as: "bookings_room", on: :member
     post 'rooms/:room_number', to: 'bookings#create', on: :member
     get 'rooms/:room_number/bookings/:id', to: 'bookings#show', as: "show_booking_room", on: :member
+    get 'rooms/:room_number/bookings/:id/edit', to: 'bookings#edit', as: "edit_booking_room", on: :member
+    patch 'rooms/:room_number/bookings/:id', to: 'bookings#update', on: :member
+    delete 'rooms/:room_number/bookings/:id', to: 'bookings#destroy', as: "destroy_booking_room", on: :member
   end
 
   root "hotels#home", as:"home"

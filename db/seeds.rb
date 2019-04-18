@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 hotels = [
   { name: "The Palace New York", location: "755 5th Ave, New York" , img_url: "palace.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service" },
-  { name: "Star Central Park", location: "200 Central Park, New York" , img_url: "star.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service" }
+  { name: "Star Central Park", location: "200 Central Park, New York" , img_url: "star.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service" },
+  { name: "Gorgerous Plaza", location: "W59th St, New York", img_url: "Gorgerous Plaza.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service"}
 ]
 
 hotels.each{|hotel| Hotel.create!(hotel)}
@@ -19,6 +20,9 @@ rooms = [
   { room_type: "Deluxe Room", rate: 399, hotel_id:2 },
   { room_type: "Grand Suite, 1 King", rate: 599, hotel_id:1 },
   { room_type: "Central Park View", rate: 599, hotel_id:2 },
+  { room_type: "Run Of House", rate: 399, hotel_id:3 },
+  { room_type: "Superior Room", rate: 599, hotel_id:3 },
+  { room_type: "Deluxe Room", rate: 499, hotel_id:3 }
 ]
 rooms.each{|room|Room.create!(room)}
 
@@ -29,7 +33,7 @@ users = [
 users.each{|user|User.create(user)}
 
 bookings =[
-  { check_in_date: DateTime.strptime("05/01/2019", "%m/%d/%Y"), check_out_date: DateTime.strptime("05/03/2019", "%m/%d/%Y"), num_rooms: 1, num_ppl: 1, room_id: 6, user_id: 1 },
-  { check_in_date: DateTime.strptime("06/01/2019", "%m/%d/%Y"), check_out_date: DateTime.strptime("06/03/2019", "%m/%d/%Y"), num_rooms: 1, num_ppl: 2, room_id: 4, user_id:  2}
+  { check_in_date: "2019/05/01", check_out_date: "2019/05/03", num_rooms: 1, num_ppl: 1, room_id: 6, user_id: 1 },
+  { check_in_date: "2019/06/01", check_out_date: "2019/06/03", num_rooms: 1, num_ppl: 2, room_id: 4, user_id:  2}
 ]
 bookings.each{|booking|Booking.create(booking)}

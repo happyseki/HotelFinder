@@ -10,6 +10,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
+    # sign up and create a user,get his id,save it to session
+    session[:user_id] = @user.id
+    # keeps the user logging in
     redirect_to home_path
   end
 
@@ -27,7 +30,9 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password_digest)
+    # change :password_digest to :password, cuz in User model we set has_secure_password
+    # that will convert password to password_digest automatically for us
+    params.require(:user).permit(:first_name, :last_name, :email, :password)
   end
 
 end
