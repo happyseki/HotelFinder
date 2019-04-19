@@ -15,7 +15,7 @@ hotels = [
   { name: "AA New York Times square", location: "19 W44 St, New York, 10018 ", img_url: "aa.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service"},
   { name: "Tiara Manhattan", location: "1333 W4 St, New York, 10003 ", img_url: "tiara.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service"},
   { name: "The Ace Of Hearts", location: "6979 Prince St, New York, 10012 ", img_url: "Ace.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service"},
-  { name: "MOMO SOHO", location: "3551 Grand St, 10013 ", img_url: "momosoho.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service"},
+  { name: "MOMO SOHO", location: "3551 Grand St, 10013 ", img_url: "momosoho.jpg", amenities: "Free WiFi, Fitness Center, Spa, Pool, Restaurant, Bar/Lounge, Laundry Service"},
   { name: "Fresh Air", location: "15 Broad St, 10005 ", img_url: "freshair.jpg", amenities: "Free WiFi, Fitness Center, Spa, Pool, Restaurant, Bar/Lounge, Laundry Service"},
   { name: "Hotel Inn Battery Park", location: "17 State St, 10004 ", img_url: "batterypark.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service"}
 ]
@@ -66,8 +66,28 @@ rooms.each{|room|Room.create!(room)}
 images = [
   { name: "palacer.jpg", hotel_id: 1 }, { name: "palacero.jpg", hotel_id: 1 }, { name: "palaceroom.jpg", hotel_id: 1 },
   { name: "shower.jpg", hotel_id: 1 }, { name: "palacehall.jpg", hotel_id: 1 }, { name: "bar.jpg", hotel_id: 1 },
-  { name: "star1.jpg", hotel_id: 2 }, { name: "star2.jpg", hotel_id: 2 }, { name: "star3.jpg", hotel_id: 2 },
-  { name: "star4.jpg", hotel_id: 2 }, { name: "star5.jpg", hotel_id: 2 }, { name: "star6.jpg", hotel_id: 2 },
+  { name: "star1.jpg", hotel_id: 2 }, { name: "star3.jpg", hotel_id: 2 }, { name: "star4.jpg", hotel_id: 2 },
+  { name: "star6.jpg", hotel_id: 2 }, { name: "bathroom.jpg", hotel_id: 2 }, { name: "pool1.jpg", hotel_id: 2 },
+  { name: "gp1.jpg", hotel_id: 3 }, { name: "gp2.jpg", hotel_id: 3 }, { name: "gp3.jpg", hotel_id: 3 },
+  { name: "gp4.jpg", hotel_id: 3 }, { name: "gp6.jpg", hotel_id: 3 }, { name: "pool1.jpg", hotel_id: 3 },
+  { name: "wh1.jpg", hotel_id: 4 }, { name: "wh2.jpg", hotel_id: 4 }, { name: "wh3.jpg", hotel_id: 4 },
+  { name: "wh4.jpg", hotel_id: 4 }, { name: "wh5.jpg", hotel_id: 4 }, { name: "shower1.jpg", hotel_id: 4 },
+  { name: "sd1.jpg", hotel_id: 5 }, { name: "sd2.jpg", hotel_id: 5 }, { name: "sd3.jpg", hotel_id: 5 },
+  { name: "sd4.jpg", hotel_id: 5 }, { name: "sd5.jpg", hotel_id: 5 }, { name: "shba.jpg", hotel_id: 5 },
+  { name: "rh1.jpg", hotel_id: 6 }, { name: "rh2.jpg", hotel_id: 6 }, { name: "rh3.jpg", hotel_id: 6 },
+  { name: "rh4.jpg", hotel_id: 6 }, { name: "rh5.jpg", hotel_id: 6 }, { name: "rh6.jpg", hotel_id: 6 },
+  { name: "a1.jpg", hotel_id: 7 }, { name: "a2.jpg", hotel_id: 7 }, { name: "a3.jpg", hotel_id: 7 },
+  { name: "a4.jpg", hotel_id: 7 }, { name: "a5.jpg", hotel_id: 7 }, { name: "shower1.jpg", hotel_id: 7 },
+  { name: "t1.jpg", hotel_id: 8 }, { name: "t2.jpg", hotel_id: 8 }, { name: "t3.jpg", hotel_id: 8 },
+  { name: "t4.jpg", hotel_id: 8 }, { name: "bathroom.jpg", hotel_id: 8 }, { name: "t5.jpg", hotel_id: 8 },
+  { name: "ace1.jpg", hotel_id: 9 }, { name: "ace2.jpg", hotel_id: 9 }, { name: "ace3.jpg", hotel_id: 9 },
+  { name: "ace4.jpg", hotel_id: 9 }, { name: "ace5.jpg", hotel_id: 9 }, { name: "ace6.jpg", hotel_id: 9 },
+  { name: "m1.jpg", hotel_id: 10 }, { name: "m2.jpg", hotel_id: 10 }, { name: "m3.jpg", hotel_id: 10 },
+  { name: "m4.jpg", hotel_id: 10 }, { name: "m5.jpg", hotel_id: 10 }, { name: "pool2.jpg", hotel_id: 10 },
+  { name: "f1.jpg", hotel_id: 11 }, { name: "f2.jpg", hotel_id: 11 }, { name: "f3.jpg", hotel_id: 11 },
+  { name: "f4.jpg", hotel_id: 11 }, { name: "f5.jpg", hotel_id: 11 }, { name: "f6.jpg", hotel_id: 11 },
+  { name: "b1.jpg", hotel_id: 12 }, { name: "b2.jpg", hotel_id: 12 }, { name: "b3.jpg", hotel_id: 12 },
+  { name: "b4.jpg", hotel_id: 12 }, { name: "b5.jpg", hotel_id: 12 }, { name: "bathroom.jpg", hotel_id: 12 }
 ]
 
 images.each{|image|Image.create!(image)}
