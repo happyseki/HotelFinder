@@ -15,3 +15,107 @@
  */
 
  @import "bootstrap";
+ // @import "navbar";
+ body {
+ background-image: url("bsky.jpg");
+ background-repeat: repeat-y;
+}
+ blink {
+     color : red;
+     -webkit-animation: 1s linear infinite condemned_blink_effect; // for android
+     animation: 1s linear infinite condemned_blink_effect;
+ }
+ @-webkit-keyframes condemned_blink_effect { // for android
+     0% {
+         visibility: hidden;
+     }
+     50% {
+         visibility: hidden;
+     }
+     100% {
+         visibility: visible;
+     }
+ }
+ @keyframes condemned_blink_effect {
+     0% {
+         visibility: hidden;
+     }
+     50% {
+         visibility: hidden;
+     }
+     100% {
+         visibility: visible;
+     }
+ }
+
+ li {
+   list-style-type: none;
+ }
+
+//  .container {
+//   grid-template-columns: 100px 100px;
+//   grid-template-rows: 80px auto 80px;
+//   grid-column-gap: 10px;
+//   grid-row-gap: 15px;
+// }
+
+ .image-container {
+     display: flex;
+     flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 5px;
+ }
+
+ .hotel-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+
+   .hotel-card {
+     width: calc(33% - 10px);
+     border-radius: 5px;
+     margin-right: 10px;
+     margin-bottom: 20px;
+     -webkit-box-shadow: 3px 7px 9px 0px rgba(0,0,0,0.33);
+      -moz-box-shadow: 3px 7px 9px 0px rgba(0,0,0,0.33);
+      box-shadow: 3px 7px 9px 0px rgba(0,0,0,0.33);
+
+     .hotel-image-container {
+       width: 100%;
+     }
+   }
+ }
+
+ .hr-image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .image-card {
+      width: calc(33% - 10px);
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+ }
+
+ .room-info-container {
+   .room-type-info,
+   .amendities-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      h3,
+      p,
+      form,
+      table {
+        text-align: center;
+      }
+   }
+ }
+footer{
+ text-align: center;
+}

@@ -1,25 +1,32 @@
 <h1><%= @hotel.name %></h1>
 <p><%= @hotel.location %></p>
-<% @images.each do|image| %>
-<%= image_tag(image.name, size:"100x100") %>
-<% end %>
-<div class="picture-container">
 
+<div class="hr-image-container">
+  <% @images.each do|image| %>
+  <div class="image-card"><%= image_tag(image.name, size:"200x200") %></div>
+  <% end %>
 </div>
 
-<h3>Room Type</h3>
-<table>
-  <tr>
-    <th>Room Type</th>
-    <th>Room Rate</th>
-  </tr>
-<% @rooms.each do |room| %>
-<tr>
-  <td><%= room.room_type %></td>
-  <td><%= room.rate %><%= button_to "BOOK NOW", booking_room_hotel_path(@hotel, room), method: :get %></td>
-</tr>
-<% end %>
-</table>
-<h3>Amenities</h3>
-<p><%= @hotel.amenities %></p>
-<%= button_to "Check More Hotels", home_path, method: :get %>
+<!-- class="image-container" -->
+<div class="room-info-container">
+  <div class="room-type-info">
+    <h3>Room Type</h3>
+    <table>
+      <tr>
+        <th>Room Type</th>
+        <th>Room Rate</th>
+      </tr>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.room_type %></td>
+        <td><%= room.rate %><%= button_to "BOOK NOW", booking_room_hotel_path(@hotel, room), method: :get, class:"btn btn-warning btn-sm" %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+  <div class="amendities-info">
+    <h3>Amenities</h3>
+    <p><%= @hotel.amenities %></p>
+    <%= button_to "Check More Hotels", home_path, method: :get, class:"btn btn-info btn-sm" %>
+  </div>
+</div>

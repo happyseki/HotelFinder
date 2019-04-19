@@ -1,3 +1,4 @@
+<hearder>
 <h1>hotelfinder<%= image_tag("jing.jpg", size:"28x28") %></h1>
 <% if @user.valid? %>
 <p>Welcome, <%= @user.first_name %>!</p>
@@ -8,12 +9,17 @@
 <% end %>
 <ul>
 
-
+<main>
+<div class="hotel-container">
  <% @hotels.each do|hotel| %>
-  <li><%= link_to hotel.name, hotel %></li><br>
-    <li><%= hotel.location %></li><br>
-  <li><%= image_tag(hotel.img_url, size:"200x200") %></li><br>
-    <li><%= hotel.amenities %></li><br><br>
+  <div class="hotel-card">
+    <div class="hotel-image-container"><%= image_tag(hotel.img_url, size:"200x200") %></div><br>
+    <%= link_to hotel.name, hotel %>
+      <blink><strong><%= "GO!" %></strong></blink>
+      <p><%= hotel.location %></p>
+      <p><%= hotel.amenities %></p>
+  </div>
   <% end %>
-
 </ul>
+</div>
+<footer>
