@@ -1,4 +1,5 @@
 class HotelsController < ApplicationController
+
   def home
     @user = User.find(session[:user_id])
 
