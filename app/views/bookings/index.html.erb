@@ -1,6 +1,9 @@
+<div class="all">
 <h1>My Bookings</h1>
 <ul>
   <% @bookings.each do|booking|%>
   <li><%= booking.room.hotel.name %>, <%= booking.room.room_type%> </li>
   <% end %>
 </ul>
+<%= button_to "Check More Hotels", home_path, method: :get, class:"btn btn-success btn-sm" %>
+</div>

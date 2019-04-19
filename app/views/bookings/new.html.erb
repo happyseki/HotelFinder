@@ -1,9 +1,14 @@
-<h1>My New Booking</h1>
+<div class="all">
+  <h1>My New Booking</h1>
+</div>
+
 <% if flash[:errors] %>
 <% flash[:errors].each do|error| %>
 <p><%=  error %></p>
 <% end %>
 <% end %>
+<div class="info-container">
+  <div class="room-type-info">
 <%= form_for @booking,  url: booking_room_hotel_path do |f| %>
   <%= f.label "Check-in:" %><br>
   <%= f.text_field :check_in_date, placeholder:"YYYY/MM/DD"%><br><br>
@@ -15,3 +20,5 @@
   <%= f.select :num_rooms, (1..10) %><br><br>
   <%= f.submit "Confirm" %>
 <% end %>
+</div>
+</div>

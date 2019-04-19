@@ -1,14 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="http://localhost:3000">hotelfinder<%= image_tag("jing.jpg", size:"28x28") %></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="http://localhost:3000">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#room-info">Room Information</a>
+      <a class="nav-item nav-link" href="#room-info">Check Price</a>
+      <a class="nav-item nav-link" href="http://localhost:3000/users/:id/bookings">View My Bookings</a>
+    </div>
+  </div>
+</nav>
+<div class="all">
 <h1><%= @hotel.name %></h1>
 <p><%= @hotel.location %></p>
 
 <div class="hr-image-container">
   <% @images.each do|image| %>
-  <div class="image-card"><%= image_tag(image.name, size:"200x200") %></div>
+  <div class="image-card"><%= image_tag(image.name, size:"350x280") %></div>
   <% end %>
 </div>
-
+</div>
 <!-- class="image-container" -->
-<div class="room-info-container">
+<div id="room-info">
+<div class="info-container">
   <div class="room-type-info">
     <h3>Room Type</h3>
     <table>
@@ -19,7 +35,7 @@
     <% @rooms.each do |room| %>
       <tr>
         <td><%= room.room_type %></td>
-        <td><%= room.rate %><%= button_to "BOOK NOW", booking_room_hotel_path(@hotel, room), method: :get, class:"btn btn-warning btn-sm" %></td>
+        <td>$<%= room.rate %><%= button_to "BOOK NOW", booking_room_hotel_path(@hotel, room), method: :get, class:"btn btn-warning btn-sm" %></td>
       </tr>
     <% end %>
     </table>
@@ -27,6 +43,9 @@
   <div class="amendities-info">
     <h3>Amenities</h3>
     <p><%= @hotel.amenities %></p>
-    <%= button_to "Check More Hotels", home_path, method: :get, class:"btn btn-info btn-sm" %>
+    <%= button_to "Check More Hotels", home_path, method: :get, class:"btn btn-success btn-sm" %>
   </div>
 </div>
+</div>
+<br>
+<br>
