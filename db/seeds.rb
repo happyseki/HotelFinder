@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 hotels = [
-  { name: "The Palace New York", location: "755 5th Ave, New York, 10018" , img_url: "palace.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service" },
+  { name: "The Palace New York", location: "755 5th Ave, New York, 10018" , img_url: "palace.jpg", amenities: "Free WiFi, Fitness Center, Spa, Pool, Restaurant, Bar/Lounge, Laundry Service" },
   { name: "Star Central Park", location: "200 Central Park, New York, 10019" , img_url: "star.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service" },
   { name: "Gorgerous Plaza", location: "W59th St, New York, 10022", img_url: "Gorgerous Plaza.jpg", amenities: "Free WiFi, Fitness Center, Spa, Pool, Restaurant, Bar/Lounge, Laundry Service"},
   { name: "Warm Home Midtown", location: "1212 6th Ave, New York, 10020 ", img_url: "warmhome.jpg", amenities: "Free WiFi, Fitness Center, Spa, Restaurant, Bar/Lounge, Laundry Service"},
@@ -64,30 +64,31 @@ rooms = [
 rooms.each{|room|Room.create!(room)}
 
 images = [
-  { name: "palacer.jpg", hotel_id: 1 }, { name: "palacero.jpg", hotel_id: 1 }, { name: "palaceroom.jpg", hotel_id: 1 },
-  { name: "shower.jpg", hotel_id: 1 }, { name: "palacehall.jpg", hotel_id: 1 }, { name: "bar.jpg", hotel_id: 1 },
-  { name: "star1.jpg", hotel_id: 2 }, { name: "star3.jpg", hotel_id: 2 }, { name: "star4.jpg", hotel_id: 2 },
-  { name: "star6.jpg", hotel_id: 2 }, { name: "bathroom.jpg", hotel_id: 2 }, { name: "pool1.jpg", hotel_id: 2 },
-  { name: "gp1.jpg", hotel_id: 3 }, { name: "gp2.jpg", hotel_id: 3 }, { name: "gp3.jpg", hotel_id: 3 },
-  { name: "gp4.jpg", hotel_id: 3 }, { name: "gp6.jpg", hotel_id: 3 }, { name: "pool1.jpg", hotel_id: 3 },
-  { name: "wh1.jpg", hotel_id: 4 }, { name: "wh2.jpg", hotel_id: 4 }, { name: "wh3.jpg", hotel_id: 4 },
-  { name: "wh4.jpg", hotel_id: 4 }, { name: "wh5.jpg", hotel_id: 4 }, { name: "shower1.jpg", hotel_id: 4 },
-  { name: "sd1.jpg", hotel_id: 5 }, { name: "sd2.jpg", hotel_id: 5 }, { name: "sd3.jpg", hotel_id: 5 },
-  { name: "sd4.jpg", hotel_id: 5 }, { name: "sd5.jpg", hotel_id: 5 }, { name: "shba.jpg", hotel_id: 5 },
-  { name: "rh1.jpg", hotel_id: 6 }, { name: "rh2.jpg", hotel_id: 6 }, { name: "rh3.jpg", hotel_id: 6 },
-  { name: "rh4.jpg", hotel_id: 6 }, { name: "rh5.jpg", hotel_id: 6 }, { name: "rh6.jpg", hotel_id: 6 },
-  { name: "a1.jpg", hotel_id: 7 }, { name: "a2.jpg", hotel_id: 7 }, { name: "a3.jpg", hotel_id: 7 },
-  { name: "a4.jpg", hotel_id: 7 }, { name: "a5.jpg", hotel_id: 7 }, { name: "shower1.jpg", hotel_id: 7 },
-  { name: "t1.jpg", hotel_id: 8 }, { name: "t2.jpg", hotel_id: 8 }, { name: "t3.jpg", hotel_id: 8 },
-  { name: "t4.jpg", hotel_id: 8 }, { name: "bathroom.jpg", hotel_id: 8 }, { name: "t5.jpg", hotel_id: 8 },
-  { name: "ace1.jpg", hotel_id: 9 }, { name: "ace2.jpg", hotel_id: 9 }, { name: "ace3.jpg", hotel_id: 9 },
-  { name: "ace4.jpg", hotel_id: 9 }, { name: "ace5.jpg", hotel_id: 9 }, { name: "ace6.jpg", hotel_id: 9 },
-  { name: "m1.jpg", hotel_id: 10 }, { name: "m2.jpg", hotel_id: 10 }, { name: "m3.jpg", hotel_id: 10 },
-  { name: "m4.jpg", hotel_id: 10 }, { name: "m5.jpg", hotel_id: 10 }, { name: "pool2.jpg", hotel_id: 10 },
-  { name: "f1.jpg", hotel_id: 11 }, { name: "f2.jpg", hotel_id: 11 }, { name: "f3.jpg", hotel_id: 11 },
-  { name: "f4.jpg", hotel_id: 11 }, { name: "f5.jpg", hotel_id: 11 }, { name: "f6.jpg", hotel_id: 11 },
-  { name: "b1.jpg", hotel_id: 12 }, { name: "b2.jpg", hotel_id: 12 }, { name: "b3.jpg", hotel_id: 12 },
-  { name: "b4.jpg", hotel_id: 12 }, { name: "b5.jpg", hotel_id: 12 }, { name: "bathroom.jpg", hotel_id: 12 }
+  { name: "https://cdn.pixabay.com/photo/2015/09/21/09/53/villa-cortine-palace-949547_960_720.jpg", hotel_id: 1 }, { name: "https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 1 },
+  { name: "https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 1 },
+  { name: "https://images.pexels.com/photos/342800/pexels-photo-342800.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 1 }, { name: "https://images.pexels.com/photos/331107/pexels-photo-331107.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", hotel_id: 1 }, { name: "https://cdn.pixabay.com/photo/2016/11/18/17/41/summer-1836046_960_720.jpg", hotel_id: 1 },
+  { name: "https://cdn.pixabay.com/photo/2018/02/09/11/38/within-3141442_960_720.jpg", hotel_id: 2 }, { name: "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406_960_720.jpg", hotel_id: 2 }, { name: "https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201_960_720.jpg", hotel_id: 2 },
+  { name: "https://cdn.pixabay.com/photo/2016/06/10/01/03/hotel-1447197_960_720.jpg", hotel_id: 2 }, { name: "https://images.pexels.com/photos/2507016/pexels-photo-2507016.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 2 }, { name: "https://images.pexels.com/photos/2677398/pexels-photo-2677398.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 2 },
+  { name: "https://cdn.pixabay.com/photo/2015/03/24/13/21/indoor-687607_960_720.jpg", hotel_id: 3 }, { name: "https://static4.depositphotos.com/1008939/323/i/450/depositphotos_3232226-stock-photo-hotel-room.jpg", hotel_id: 3 }, { name: "https://images.pexels.com/photos/280209/pexels-photo-280209.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 3 },
+  { name: "https://cdn.pixabay.com/photo/2015/09/21/09/54/villa-cortine-palace-949552_960_720.jpg", hotel_id: 3 }, { name: "https://images.pexels.com/photos/1267438/pexels-photo-1267438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 3 }, { name: "https://images.pexels.com/photos/2677398/pexels-photo-2677398.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 3 },
+  { name: "https://images.pexels.com/photos/277572/pexels-photo-277572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 4 }, { name: "https://images.pexels.com/photos/172872/pexels-photo-172872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 4 }, { name: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 4 },
+  { name: "https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 4 }, { name: "https://cdn.pixabay.com/photo/2016/04/15/11/50/hotel-1330854_960_720.jpg", hotel_id: 4 }, { name: "https://images.pexels.com/photos/331107/pexels-photo-331107.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 4 },
+  { name: "https://images.pexels.com/photos/573552/pexels-photo-573552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 5 }, { name: "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_960_720.jpg", hotel_id: 5 }, { name: "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 5 },
+  { name: "https://images.pexels.com/photos/707581/pexels-photo-707581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 5 }, { name: "https://images.pexels.com/photos/941864/pexels-photo-941864.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 5 }, { name: "https://images.pexels.com/photos/1571462/pexels-photo-1571462.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 5 },
+  { name: "https://cdn.pixabay.com/photo/2015/03/11/10/34/hall-668475_960_720.jpg", hotel_id: 6 }, { name: "https://cdn.pixabay.com/photo/2013/12/28/11/10/room-234641_960_720.jpg", hotel_id: 6 }, { name: "https://cdn.pixabay.com/photo/2018/03/01/03/52/furniture-3189674_960_720.jpg", hotel_id: 6 },
+  { name: "https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 6 }, { name: "https://images.pexels.com/photos/1707957/pexels-photo-1707957.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 6 }, { name: "https://cdn.pixabay.com/photo/2015/09/15/11/04/hotel-940730_960_720.jpg", hotel_id: 6 },
+  { name: "https://cdn.pixabay.com/photo/2016/10/18/09/02/hotel-1749602_960_720.jpg", hotel_id: 7 }, { name: "https://images.pexels.com/photos/1879069/pexels-photo-1879069.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 7 }, { name: "https://images.pexels.com/photos/4217/hotel-bed-bedroom-room.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 7 },
+  { name: "https://images.pexels.com/photos/1907044/pexels-photo-1907044.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 7 }, { name: "https://images.pexels.com/photos/342800/pexels-photo-342800.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 7 }, { name: "https://images.pexels.com/photos/2225580/pexels-photo-2225580.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 7 },
+  { name: "https://images.pexels.com/photos/2029719/pexels-photo-2029719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 8 }, { name: "https://images.pexels.com/photos/2029698/pexels-photo-2029698.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 8 }, { name: "https://images.pexels.com/photos/2029687/pexels-photo-2029687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 8 },
+  { name: "https://cdn.pixabay.com/photo/2014/05/01/20/38/bathroom-335748_960_720.jpg", hotel_id: 8 }, { name: "https://images.pexels.com/photos/941864/pexels-photo-941864.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 8 }, { name: "https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 8 },
+  { name: "https://images.pexels.com/photos/693895/pexels-photo-693895.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 9 }, { name: "https://images.pexels.com/photos/358527/pexels-photo-358527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 9 }, { name: "https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594_960_720.jpg", hotel_id: 9 },
+  { name: "https://images.pexels.com/photos/1591047/pexels-photo-1591047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 9 }, { name: "https://images.pexels.com/photos/172872/pexels-photo-172872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 9 }, { name: "https://images.pexels.com/photos/63633/bar-local-cong-ireland-63633.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 9 },
+  { name: "https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594_960_720.jpg", hotel_id: 10 }, { name: "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", hotel_id: 10 }, { name: "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 10 },
+  { name: "https://cdn.pixabay.com/photo/2016/02/01/18/27/wedding-table-1174142_960_720.jpg", hotel_id: 10 }, { name: "https://images.pexels.com/photos/2507016/pexels-photo-2507016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 10 }, { name: "pool.jpg", hotel_id: 10 },
+  { name: "https://images.pexels.com/photos/2015562/pexels-photo-2015562.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", hotel_id: 11 }, { name: "https://cdn.pixabay.com/photo/2018/02/13/09/39/modern-minimalist-bathroom-3150293_960_720.jpg", hotel_id: 11 }, { name: "https://cdn.pixabay.com/photo/2015/11/06/11/46/interior-1026464_960_720.jpg", hotel_id: 11 },
+  { name: "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406_960_720.jpg", hotel_id: 11 }, { name: "https://images.pexels.com/photos/751046/pexels-photo-751046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 11 }, { name: "https://cdn.pixabay.com/photo/2014/08/05/18/17/dining-410832__340.jpg", hotel_id: 11 },
+  { name: "https://images.pexels.com/photos/1501272/pexels-photo-1501272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 12 }, { name: "https://cdn.pixabay.com/photo/2014/10/16/08/39/bedroom-490779_960_720.jpg", hotel_id: 12 }, { name: "https://images.pexels.com/photos/1457845/pexels-photo-1457845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 12 },
+  { name: "https://images.pexels.com/photos/280209/pexels-photo-280209.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 12 }, { name: "https://images.pexels.com/photos/34650/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", hotel_id: 12 }, { name: "ballroom.jpg", hotel_id: 12 }
 ]
 
 images.each{|image|Image.create!(image)}
